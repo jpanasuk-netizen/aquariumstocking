@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquarium Stocking Calculator — Bioload, Heater Watts, Filter GPH & Water Changes (2026)</title>
+<meta name="description" content="Free aquarium stocking calculator: bioload-based fish counts for your tank volume, heater wattage by ΔT, filter GPH turnover, and water-change schedule by nitrate balance.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/aquariumstocking/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Aquarium Stocking Calculator — How Many Fish Fit My Tank?">
+<meta property="og:description" content="Forget the 1-inch-per-gallon myth. Bioload-based stocking, heater watts by ΔT, filter turnover, and water-change math for freshwater tanks.">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/aquariumstocking/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AquariumStocking Bioload Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "url": "https://jpanasuk-netizen.github.io/aquariumstocking/",
+  "description": "Free aquarium stocking calculator: bioload points by adult fish size and waste class, heater wattage by tank volume and temperature rise, filter GPH turnover (4–6x/hr), and water-change schedule by nitrate accumulation.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is 1 inch of fish per gallon a good stocking rule?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — it fails at both ends. A 10-inch oscar in a 10-gallon tank 'fits' the rule and dies in weeks; a dozen 1-inch neon tetras in 10 gallons is lightly stocked. Bioload scales with body mass and waste output, not length. Count adult size, use bioload points (small fish 1, medium 3, large 8–12), and keep the total at or under your tank's capacity in points: roughly 10 points per 10 gallons for a filtered, planted community tank." }
+    },
+    {
+      "@type": "Question",
+      "name": "What wattage heater do I need for my aquarium?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Plan 3–5 watts per gallon depending on how far you're heating above room temperature: 3 W/gal raises a tank about 9°F above room, 5 W/gal about 15–20°F. A 20-gallon tank in a 68°F room headed for 78°F is comfortable with a 75–100 W heater; a 55-gallon in a cold basement wants 250–300 W or two 150 W units for redundancy." }
+    },
+    {
+      "@type": "Question",
+      "name": "How strong should my aquarium filter be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Turn your tank volume over 4–6 times per hour: a 29-gallon tank wants a filter rated 120–175 GPH at the tank, and since manufacturer ratings are measured without media and tubing losses, size toward the high end. Heavily stocked tanks and goldfish need 6–8×. More filtration never hurts water quality — only flow-sensitive fish care." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I change aquarium water?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Size changes to nitrate balance: if nitrates rise 20 ppm per week, a 50% weekly change holds them at a safe plateau under 40 ppm. The standard 25% weekly works for lightly stocked community tanks; heavily stocked or messy-fish tanks need 40–50% weekly. Test, don't guess — tap-water nitrate above 20 ppm changes the math entirely." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">AquariumStocking</a>
+  <nav aria-label="Site">
+    <a href="#calc">Calculator</a>
+    <a href="how-many-fish-per-gallon.html">Fish per gallon</a>
+    <a href="aquarium-heater-wattage-guide.html">Heater guide</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>Aquarium stocking calculator</h1>
+<p class="sub">Bioload beats the inch-per-gallon myth. Count your fish by adult size and waste class — get stocking points, heater watts, filter GPH, and your water-change schedule.</p>
+
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-stock', this)">Stocking</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-heat', this)">Heater size</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-filter', this)">Filter GPH</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-water', this)">Water changes</button>
+</div>
+
+<!-- ============ 1. STOCKING ============ -->
+<section id="tab-stock" class="panel active" role="tabpanel">
+  <fieldset>
+    <legend>Tank</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="akGallons">Tank size (gallons)</label>
+        <input type="number" id="akGallons" placeholder="e.g. 20" min="2" max="500">
+      </div>
+      <div class="field">
+        <label for="akStyle">Setup</label>
+        <select id="akStyle">
+          <option value="community" selected>Planted / community (标准 filtration)</option>
+          <option value="heavy">Heavy-stock or messy fish (goldfish, plecos, cichlids)</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Your fish (adult size, not current)</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="akSmall">Small fish ≤2" (tetras, guppies, cherry barbs) — 1 pt each</label>
+        <input type="number" id="akSmall" placeholder="count" min="0">
+      </div>
+      <div class="field">
+        <label for="akMed">Medium 2–5" (angelfish, gourami, corys) — 3 pts each</label>
+        <input type="number" id="akMed" placeholder="count" min="0">
+      </div>
+      <div class="field">
+        <label for="akLarge">Large 5–10" (goldfish, bigger cichlids) — 8 pts each</label>
+        <input type="number" id="akLarge" placeholder="count" min="0">
+      </div>
+      <div class="field">
+        <label for="akHuge">XL 10"+ (oscars, common plecos) — 14 pts each</label>
+        <input type="number" id="akHuge" placeholder="count" min="0">
+      </div>
+    </div>
+    <button class="tabs" style="display:inline-block" onclick="calcStocking()">Check my tank</button>
+  </fieldset>
+  <div id="akStockResult" class="ans" hidden></div>
+  <div class="affil">
+    <span class="tag">Stock up</span>
+    <p class="small">Test kits, filters, and tank deals linked after affiliate approval. <!-- AFFILIATE SLOT: Amazon Associates — test kits, filters --></p>
+  </div>
+</section>
+
+<!-- ============ 2. HEATER ============ -->
+<section id="tab-heat" class="panel" role="tabpanel">
+  <fieldset>
+    <legend>Heater sizing</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="akHGallons">Tank gallons</label>
+        <input type="number" id="akHGallons" placeholder="e.g. 29" min="2">
+      </div>
+      <div class="field">
+        <label for="akRoom">Room temperature (°F)</label>
+        <input type="number" id="akRoom" value="68" min="50" max="90">
+      </div>
+      <div class="field">
+        <label for="akTarget">Target tank temp (°F)</label>
+        <input type="number" id="akTarget" value="78" min="60" max="90">
+      </div>
+    </div>
+    <button class="tabs" style="display:inline-block" onclick="calcHeater()">Size my heater</button>
+  </fieldset>
+  <div id="akHeatResult" class="ans" hidden></div>
+</section>
+
+<!-- ============ 3. FILTER ============ -->
+<section id="tab-filter" class="panel" role="tabpanel">
+  <fieldset>
+    <legend>Filter turnover</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="akFGallons">Tank gallons</label>
+        <input type="number" id="akFGallons" placeholder="e.g. 29" min="2">
+      </div>
+      <div class="field">
+        <label for="akFStock">Stocking level</label>
+        <select id="akFStock">
+          <option value="light">Lightly stocked community (4×/hr)</option>
+          <option value="normal" selected>Normal community (5×/hr)</option>
+          <option value="heavy">Heavy / messy fish (7×/hr)</option>
+        </select>
+      </div>
+    </div>
+    <button class="tabs" style="display:inline-block" onclick="calcFilter()">Get my GPH</button>
+  </fieldset>
+  <div id="akFilterResult" class="ans" hidden></div>
+</section>
+
+<!-- ============ 4. WATER CHANGES ============ -->
+<section id="tab-water" class="panel" role="tabpanel">
+  <fieldset>
+    <legend>Nitrate-balance changes</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="akWNitrate">Nitrate rise per week (ppm)</label>
+        <input type="number" id="akWNitrate" placeholder="e.g. 20" min="1" max="100">
+      </div>
+      <div class="field">
+        <label for="akWTarget">Nitrate ceiling you want (ppm)</label>
+        <input type="number" id="akWTarget" value="40" min="10" max="80">
+      </div>
+      <div class="field">
+        <label for="akWTap">Tap water nitrate (ppm)</label>
+        <input type="number" id="akWTap" value="5" min="0" max="80">
+      </div>
+    </div>
+    <button class="tabs" style="display:inline-block" onclick="calcWaterChange()">Compute my schedule</button>
+  </fieldset>
+  <div id="akWaterResult" class="ans" hidden></div>
+</section>
+
+<!-- ============ CONTENT ============ -->
+<h2>Why bioload beats inches</h2>
+<p>The 1-inch-per-gallon rule dates from goldfish-bowl era advice. It ignores that a 10-inch oscar weighs 40× a 10-inch school of neons, that surface area limits oxygen exchange more than volume limits waste, and that adult size is what counts — the 2-inch bala shark you bought today wants 150 gallons in three years. Bioload points approximate real waste output: <strong>small (≤2") = 1 pt, medium (2–5") = 3 pts, large (5–10") = 8 pts, XL (10"+) = 14 pts</strong>, with messy fish (goldfish, common plecos) counted one class up.</p>
+
+<h2>Quick reference by tank size</h2>
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Tank</th><th class="num">Capacity (pts)</th><th class="num">Heater (78°F from 68°F)</th><th class="num">Filter GPH (5×)</th></tr></thead>
+  <tbody>
+    <tr><td>10 gal</td><td class="num">10</td><td class="num">50 W</td><td class="num">50–80</td></tr>
+    <tr><td>20 gal long</td><td class="num">20</td><td class="num">75–100 W</td><td class="num">100–150</td></tr>
+    <tr><td>29 gal</td><td class="num">29</td><td class="num">100–150 W</td><td class="num">150–200</td></tr>
+    <tr><td>55 gal</td><td class="num">55</td><td class="num">200–250 W</td><td class="num">275–350</td></tr>
+    <tr><td>75 gal</td><td class="num">75</td><td class="num">250–300 W</td><td class="num">375–500</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="small">Capacity assumes normal filtration, regular water changes, and a cycled tank. Planted tanks with fast growers buy you maybe 10–20% headroom — don't spend it all.</p>
+
+<h2>Guides</h2>
+<div class="card"><h3><a href="how-many-fish-per-gallon.html">How many fish per gallon? The honest answer</a></h3><p>Why the inch rule fails, how bioload points work, and worked examples for 10, 20, and 55 gallon tanks.</p></div>
+<div class="card"><h3><a href="aquarium-heater-wattage-guide.html">Aquarium heater wattage: the 3–5 W/gal rule, done right</a></h3><p>ΔT math, two-heater redundancy for big tanks, and why an oversized heater with a thermostat beats undersized.</p></div>
+<div class="card"><h3><a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">Power outages and your tank ↗</a></h3><p>A stocked tank on a battery backup — GeneratorSizer and Battery Bank Sizer do the runtime math.</p></div>
+</main>
+
+<footer>
+  AquariumStocking · free sizing tools for freshwater keepers · pages may contain affiliate links ·
+  <a href="https://jpanasuk-netizen.github.io/generatorsizer/">GeneratorSizer</a> ·
+  <a href="https://jpanasuk-netizen.github.io/solarsizer/">SolarSizer</a> ·
+  <a href="https://jpanasuk-netizen.github.io/weldingcalc/">WeldingCalc</a> ·
+  <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/">Battery Bank Sizer</a> ·
+  <a href="https://jpanasuk-netizen.github.io/chickencoopcalc/">ChickenCoopCalc</a>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

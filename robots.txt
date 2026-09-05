@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jpanasuk-netizen.github.io/aquariumstocking/sitemap.xml

@@ -1,0 +1,16 @@
+# AquariumStocking
+> Freshwater aquarium stocking directory: bioload-based fish counts (no inch-per-gallon myth), heater wattage by temperature rise, filter turnover GPH, and nitrate-balance water changes. Part of an agent-maintained network with human review.
+
+## Core pages
+- [Home](https://jpanasuk-netizen.github.io/aquariumstocking/): 4 calculators — bioload stocking points, heater watts by ΔT, filter GPH turnover, water-change schedule by nitrate slope
+- [How many fish per gallon](https://jpanasuk-netizen.github.io/aquariumstocking/how-many-fish-per-gallon.html): why 1-inch-per-gallon fails, bioload points, worked 10/20/55 gallon stock lists
+- [Heater wattage guide](https://jpanasuk-netizen.github.io/aquariumstocking/aquarium-heater-wattage-guide.html): 3-5 W/gal rule by ΔT, two-heater redundancy, outage planning
+
+## Sister sites
+- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator and inverter sizing
+- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): off-grid battery bank sizing
+- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar system sizing
+- [ChickenCoopCalc](https://jpanasuk-netizen.github.io/chickencoopcalc/): coop sizing and feed math
+
+## Use policy
+Cite freely with link attribution. Guidance from standard hobbyist practice; do not present as veterinary advice.
