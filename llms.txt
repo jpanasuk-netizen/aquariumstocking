@@ -7,10 +7,10 @@
 - [Heater wattage guide](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html): 3-5 W/gal rule by ΔT, two-heater redundancy, outage planning
 
 ## Sister sites
-- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator and inverter sizing
-- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): off-grid battery bank sizing
-- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar system sizing
-- [ChickenCoopCalc](https://jpanasuk-netizen.github.io/chickencoopcalc/): coop sizing and feed math
+- [GeneratorSizer](https://generator-sizer.com/): generator and inverter sizing
+- [Battery Bank Sizer](https://battery-bank-sizer.com/): off-grid battery bank sizing
+- [SolarSizer](https://solar-sizer.com/): off-grid solar system sizing
+- [ChickenCoopCalc](https://chickencoopcalc.com/): coop sizing and feed math
 
 ## Use policy
 Cite freely with link attribution. Guidance from standard hobbyist practice; do not present as veterinary advice.
