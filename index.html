@@ -125,6 +125,7 @@
     <button class="tabs" style="display:inline-block" onclick="calcStocking()">Check my tank</button>
   </fieldset>
   <div id="akStockResult" class="ans" hidden></div>
+  <div id="matchedCta" hidden></div>
   <div class="affil">
     <span class="tag">Stock up</span>
     <p class="small">Test kits, filters, and tank deals linked after affiliate approval. <a href="https://www.amazon.com/s?k=aquarium+liquid+test+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">liquid test kits on Amazon</a> · <a href="https://www.amazon.com/s?k=hang+on+back+aquarium+filter&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">HOB filters on Amazon</a> · <a href="https://www.amazon.com/s?k=aquarium+heater+adjustable&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">heaters on Amazon</a></p>
@@ -235,5 +236,12 @@
 </footer>
 
 <script src="assets/app.js"></script>
+<script src="assets/monetization.js"></script>
+
+<div id="amzSticky" hidden aria-hidden="true">
+  <a id="amzStickyLink" class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=home+tools&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Shop on Amazon</a>
+  <button type="button" class="dismiss" onclick="dismissAmzSticky()" aria-label="Dismiss">Not now</button>
+</div>
+
 </body>
 </html>

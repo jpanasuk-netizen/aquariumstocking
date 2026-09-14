@@ -82,6 +82,7 @@ function calcStocking(){
   var style = el("akStyle").value;
   var r = calcStockingPoints(g, readNum("akSmall"), readNum("akMed"), readNum("akLarge"), readNum("akHuge"), style);
   var box = el("akStockResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(parseFloat(el('akGallons').value)||20, 'stock');
   var color = r.status === "overstocked" ? "var(--warn)" : "var(--ok)";
   box.innerHTML =
     '<div class="big" style="color:'+color+'">'+fmt(r.points)+' <span class="unit">points of '+fmt(r.capacity)+' capacity — '+r.status+' ('+r.pct+'%)</span></div>'+
@@ -94,6 +95,7 @@ function calcHeater(){
   if(!g){ alert("Enter tank gallons."); return; }
   var r = calcHeaterWatts(g, readNum("akRoom"), readNum("akTarget"));
   var box = el("akHeatResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(parseFloat(el('akHGallons').value)||20, 'heater');
   box.innerHTML =
     '<div class="big">'+r.watts+' <span class="unit">watts ('+r.dT+'°F rise, '+r.wpg+' W/gal)</span></div>'+
     '<div class="grid2">'+
@@ -108,6 +110,7 @@ function calcFilter(){
   if(!g){ alert("Enter tank gallons."); return; }
   var r = calcFilterGPH(g, el("akFStock").value);
   var box = el("akFilterResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(parseFloat(el('akFGallons').value)||20, 'filter');
   box.innerHTML =
     '<div class="big">'+r.gph+' <span class="unit">GPH ('+r.turns+'× turnover, derated for real media)</span></div>'+
     '<p class="note">Manufacturer GPH is measured empty — media, tubing, and pre-filters cut real flow 15–25%, hence the derating. A 29 gal normal community wants '+fmt(r.ideal)+' GPH ideal, ~'+r.gph+' GPH on the box. Sponge filters: count at half their rating.</p>';
