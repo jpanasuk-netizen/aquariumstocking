@@ -14,3 +14,10 @@
 
 ## Use policy
 Cite freely with link attribution. Guidance from standard hobbyist practice; do not present as veterinary advice.
+
+## Topic map
+- [AquariumStocking topic map](https://aquarium-stocking.com/topics.html): Stocking calculator for freshwater aquarium keepers.
+- **Bioload stocking:** [Stocking calculator](https://aquarium-stocking.com/), [Tank recipe card](https://aquarium-stocking.com/magnet.html), [How many fish per gallon](https://aquarium-stocking.com/how-many-fish-per-gallon.html)
+- **Worked example:** [Fish in a 20 gallon](https://aquarium-stocking.com/how-many-fish-in-a-20-gallon-tank.html)
+- **Filtration:** [Filter for a 20 gallon](https://aquarium-stocking.com/what-size-filter-for-a-20-gallon-tank.html)
+- **Heat:** [Heater wattage](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html)
