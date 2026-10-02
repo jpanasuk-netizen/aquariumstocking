@@ -1,14 +1,4 @@
 {
-  "sources": [
-    {
-      "title": "NRDC Fish Stocking Guidelines",
-      "url": "https://www.nrdc.org/issues/fish-stocking-density",
-      "date": "2026-09-17"
-    },
-    {
-      "title": "FishKeepingWorld.com Stocking Chart",
-      "url": "https://www.fishkeepingworld.com/stocking-chart/",
-      "date": "2026-09-17"
-    }
-  ]
+  "sources": [],
+  "note": "Bioload points, watts per gallon, and filter turnover on this site are planning estimates for a cycled freshwater tank, not a published standard."
 }

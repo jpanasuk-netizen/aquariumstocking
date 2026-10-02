@@ -63,22 +63,11 @@
 
 <script id="sources-data" type="application/json">
 {
-  "sources": [
-    {
-      "title": "NRDC Fish Stocking Guidelines",
-      "url": "https://www.nrdc.org/issues/fish-stocking-density",
-      "date": "2026-09-17"
-    },
-    {
-      "title": "FishKeepingWorld.com Stocking Chart",
-      "url": "https://www.fishkeepingworld.com/stocking-chart/",
-      "date": "2026-09-17"
-    }
-  ]
+  "sources": []
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
 </script>
 <meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
@@ -271,6 +260,46 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="card"><h3><a href="how-many-fish-per-gallon.html">How many fish per gallon? The honest answer</a></h3><p>Why the inch rule fails, how bioload points work, and worked examples for 10, 20, and 55 gallon tanks.</p></div>
 <div class="card"><h3><a href="aquarium-heater-wattage-guide.html">Aquarium heater wattage: the 3–5 W/gal rule, done right</a></h3><p>ΔT math, two-heater redundancy for big tanks, and why an oversized heater with a thermostat beats undersized.</p></div>
 <div class="card"><h3><a href="https://generator-sizer.com/" rel="noopener">Power outages and your tank ↗</a></h3><p>A stocked tank on a battery backup — GeneratorSizer and Battery Bank Sizer do the runtime math.</p></div>
+
+<section id="common-questions" aria-label="Common questions">
+<h2>Common questions</h2>
+<p>Each question below is its own page. The calculator on this page is the place to check a mixed stocking list.</p>
+<h3>Heater size</h3>
+<ul>
+<li><a href="what-size-heater-for-a-10-gallon-tank.html">What size heater does a 10 gallon tank need?</a></li>
+<li><a href="what-size-heater-for-a-29-gallon-tank.html">What size heater does a 29 gallon tank need?</a></li>
+<li><a href="what-size-heater-for-a-40-gallon-tank.html">What size heater does a 40 gallon tank need?</a></li>
+<li><a href="what-size-heater-for-a-55-gallon-tank.html">What size heater does a 55 gallon tank need?</a></li>
+<li><a href="what-size-heater-for-a-75-gallon-tank.html">What size heater does a 75 gallon tank need?</a></li>
+</ul>
+<h3>Small schooling fish</h3>
+<ul>
+<li><a href="what-size-tank-for-neon-tetras.html">What size tank do neon tetras need?</a></li>
+<li><a href="what-size-tank-for-cherry-barbs.html">What size tank do cherry barbs need?</a></li>
+<li><a href="what-size-tank-for-harlequin-rasboras.html">What size tank do harlequin rasboras need?</a></li>
+<li><a href="what-size-tank-for-zebra-danios.html">What size tank do zebra danios need?</a></li>
+</ul>
+<h3>Livebearers and labyrinth fish</h3>
+<ul>
+<li><a href="what-size-tank-for-betta-fish.html">What size tank does a betta fish need?</a></li>
+<li><a href="what-size-tank-for-guppies.html">What size tank do guppies need?</a></li>
+<li><a href="what-size-tank-for-platies.html">What size tank do platies need?</a></li>
+<li><a href="what-size-tank-for-mollies.html">What size tank do mollies need?</a></li>
+<li><a href="what-size-tank-for-dwarf-gourami.html">What size tank does a dwarf gourami need?</a></li>
+</ul>
+<h3>Bottom dwellers</h3>
+<ul>
+<li><a href="what-size-tank-for-corydoras.html">What size tank does a bronze cory need?</a></li>
+<li><a href="what-size-tank-for-bristlenose-pleco.html">What size tank does a bristlenose pleco need?</a></li>
+</ul>
+<h3>Cichlids</h3>
+<ul>
+<li><a href="what-size-tank-for-german-blue-ram.html">What size tank does a German blue ram need?</a></li>
+<li><a href="what-size-tank-for-angelfish.html">What size tank does an angelfish need?</a></li>
+<li><a href="what-size-tank-for-discus.html">What size tank does a discus need?</a></li>
+<li><a href="what-size-tank-for-oscar.html">What size tank does an oscar need?</a></li>
+</ul>
+</section>
 </main>
 
 <section id="soft-rail" class="panel" aria-label="Related guides and offers" style="margin-top:1.5rem">

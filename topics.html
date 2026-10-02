@@ -24,22 +24,11 @@
 
 <script id="sources-data" type="application/json">
 {
-  "sources": [
-    {
-      "title": "NRDC Fish Stocking Guidelines",
-      "url": "https://www.nrdc.org/issues/fish-stocking-density",
-      "date": "2026-09-17"
-    },
-    {
-      "title": "FishKeepingWorld.com Stocking Chart",
-      "url": "https://www.fishkeepingworld.com/stocking-chart/",
-      "date": "2026-09-17"
-    }
-  ]
+  "sources": []
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
 </script>
 <meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
@@ -88,7 +77,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="/what-size-tank-for-guppies.html">What size tank guppies need</a> — 18 × 12 × 12 in, about 11 US gallons (<a href="https://www.seriouslyfish.com/species/poecilia-reticulata/">Seriously Fish</a>).</li>
 <li><a href="/what-size-tank-for-oscar.html">What size tank an oscar needs</a> — 60 × 24 in base, about 143 US gallons for a single adult (<a href="https://www.seriouslyfish.com/species/astronotus-ocellatus/">Seriously Fish</a>).</li>
 <li><a href="/what-size-tank-for-zebra-danios.html">What size tank zebra danios need</a> — 36 × 12 in base, about 21 US gallons (<a href="https://www.seriouslyfish.com/species/danio-rerio/">Seriously Fish</a>).</li>
-<li><a href="/what-size-tank-for-corydoras.html">What size tank a bronze cory needs</a> — 31 × 12 in base, about 19 US gallons, group of at least 4-6 (<a href="https://www.seriouslyfish.com/species/corydoras-aeneus/">Seriously Fish</a>).</li>
+<li><a href="/what-size-tank-for-corydoras.html">What size tank a bronze cory needs</a> — 31 × 12 in base, about 19 US gallons, group of at least 4-6 (<a href="https://www.seriouslyfish.com/species/osteogaster-aenea">Seriously Fish</a>).</li>
 <li><a href="/what-size-tank-for-platies.html">What size tank platies need</a> — 24 × 12 × 12 in, about 14 US gallons (<a href="https://www.seriouslyfish.com/species/xiphophorus-maculatus/">Seriously Fish</a>).</li>
 <li><a href="/what-size-tank-for-mollies.html">What size tank mollies need</a> — 36 × 12 × 12 in, about 21 US gallons (<a href="https://www.seriouslyfish.com/species/poecilia-sphenops/">Seriously Fish</a>).</li>
 <li><a href="/what-size-tank-for-bristlenose-pleco.html">What size tank a bristlenose pleco needs</a> — 31 × 12 in base, about 19 US gallons for a couple (<a href="https://www.seriouslyfish.com/species/ancistrus-sp/">Seriously Fish</a>).</li>
