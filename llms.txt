@@ -21,3 +21,26 @@ Cite freely with link attribution. Guidance from standard hobbyist practice; do 
 - **Worked example:** [Fish in a 20 gallon](https://aquarium-stocking.com/how-many-fish-in-a-20-gallon-tank.html)
 - **Filtration:** [Filter for a 20 gallon](https://aquarium-stocking.com/what-size-filter-for-a-20-gallon-tank.html)
 - **Heat:** [Heater wattage](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html)
+
+## Questions
+Short tank-size and heater-size answers. Species numbers are from the linked Seriously Fish profile. Heater bands are from the Aqueon chart linked on each heater page. Accessed Oct 2, 2026.
+- [What size tank a betta fish needs](https://aquarium-stocking.com/what-size-tank-for-betta-fish.html): 18 × 12 in, about 11 US gallons
+- [What size tank neon tetras need](https://aquarium-stocking.com/what-size-tank-for-neon-tetras.html): 24 × 12 in, about 14 US gallons, group of at least 8-10
+- [What size tank an angelfish needs](https://aquarium-stocking.com/what-size-tank-for-angelfish.html): 39 × 16 × 20 in, about 53 US gallons
+- [What size tank guppies need](https://aquarium-stocking.com/what-size-tank-for-guppies.html): 18 × 12 × 12 in, about 11 US gallons
+- [What size tank an oscar needs](https://aquarium-stocking.com/what-size-tank-for-oscar.html): 60 × 24 in, about 143 US gallons
+- [What size tank zebra danios need](https://aquarium-stocking.com/what-size-tank-for-zebra-danios.html): 36 × 12 in, about 21 US gallons
+- [What size tank a bronze cory needs](https://aquarium-stocking.com/what-size-tank-for-corydoras.html): 31 × 12 in, about 19 US gallons
+- [What size tank platies need](https://aquarium-stocking.com/what-size-tank-for-platies.html): 24 × 12 × 12 in, about 14 US gallons
+- [What size tank mollies need](https://aquarium-stocking.com/what-size-tank-for-mollies.html): 36 × 12 × 12 in, about 21 US gallons
+- [What size tank a bristlenose pleco needs](https://aquarium-stocking.com/what-size-tank-for-bristlenose-pleco.html): 31 × 12 in, about 19 US gallons
+- [What size tank a German blue ram needs](https://aquarium-stocking.com/what-size-tank-for-german-blue-ram.html): 24 × 12 in, about 14 US gallons, gentle flow
+- [What size tank a dwarf gourami needs](https://aquarium-stocking.com/what-size-tank-for-dwarf-gourami.html): 24 × 12 × 12 in, 56 liters
+- [What size tank cherry barbs need](https://aquarium-stocking.com/what-size-tank-for-cherry-barbs.html): 24 × 12 in, about 14 US gallons, school of at least 6-10
+- [What size tank harlequin rasboras need](https://aquarium-stocking.com/what-size-tank-for-harlequin-rasboras.html): 24 × 12 in, about 14 US gallons
+- [What size tank a discus needs](https://aquarium-stocking.com/what-size-tank-for-discus.html): about 48 × 18 × 18 in, 255 liters
+- [What size heater a 10 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-10-gallon-tank.html): 50 watts, 5-20 gallon band
+- [What size heater a 29 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-29-gallon-tank.html): 100 watts, 15-40 gallon band
+- [What size heater a 40 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-40-gallon-tank.html): 100 watt and 150 watt bands overlap
+- [What size heater a 55 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-55-gallon-tank.html): 150 watt and 200 watt bands overlap
+- [What size heater a 75 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-75-gallon-tank.html): 200 watt and 300 watt bands overlap
