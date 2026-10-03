@@ -25,6 +25,16 @@ Cite freely with link attribution. Guidance from standard hobbyist practice; do 
 - **Filtration:** [Filter for a 20 gallon](https://aquarium-stocking.com/what-size-filter-for-a-20-gallon-tank.html)
 - **Heat:** [Heater wattage](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html)
 
+## Care
+Sourced care pages published October 3, 2026. Each one runs the site's calculator and cites the manual or extension sheet it uses.
+- [Cloudy water in a new tank](https://aquarium-stocking.com/how-to-fix-cloudy-water-in-a-new-tank.html): test ammonia and nitrite before treating a cloud
+- [How to add fish](https://aquarium-stocking.com/how-to-add-fish-to-your-aquarium.html): quarantine at least 30 days, then a small first group
+- [How much to feed tropical fish](https://aquarium-stocking.com/how-much-to-feed-tropical-fish.html): VM114 maintenance feeding; koi and goldfish differ
+- [How to treat sick fish](https://aquarium-stocking.com/how-to-treat-sick-fish.html): water test first; no drug doses
+- [How to keep pet fish alive](https://aquarium-stocking.com/how-to-keep-pet-fish-alive.html): one 20-gallon starter through all four calculator functions
+- [Koi in a 500-gallon pond](https://aquarium-stocking.com/how-many-koi-in-a-500-gallon-pond.html): aquarium formula labeled as such; SRAC 7201 water limits
+- [Humane euthanasia](https://aquarium-stocking.com/how-to-humanely-euthanize-a-fish.html): AVMA 2020 wording; a veterinarian performs it
+
 ## Questions
 Short tank-size and heater-size answers. Species numbers are from the linked Seriously Fish profile. Heater bands are from the Aqueon chart linked on each heater page. Accessed Oct 2, 2026.
 - [What size tank a betta fish needs](https://aquarium-stocking.com/what-size-tank-for-betta-fish.html): 18 × 12 in, about 11 US gallons
