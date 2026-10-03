@@ -17,10 +17,14 @@
 document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
 </script>
 <meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
+<link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
 <h1>Page not found</h1>
 <p>That URL doesn't exist on this site.</p>
 <p><a href="/">Go to the homepage</a> or open the <a href="/index.html">Aquarium Stocking Calculator</a> directly.</p>
+<footer>
+Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a>
+</footer>
 </body>
 </html>

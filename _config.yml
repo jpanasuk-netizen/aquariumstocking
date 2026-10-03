@@ -1,0 +1,28 @@
+# GitHub Pages runs Jekyll. This list stops repo-internal docs and scripts
+# from being copied into the published site. HTML pages have no front matter,
+# so Jekyll copies them as static files and does not run Liquid on them.
+# Defaults below are Jekyll's own exclude list; setting exclude replaces it.
+exclude:
+  - README.md
+  - LAUNCH_CHECKLIST.md
+  - MONETIZATION_STAGING.md
+  - lead-form-fields.md
+  - slm-advisor-marketing.md
+  - whop-sizing-report.md
+  - "*.md"
+  - "*.markdown"
+  - "*.yaml"
+  - smoke-test.js
+  - test
+  - tests
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
