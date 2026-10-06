@@ -2,9 +2,10 @@
    Standards:
    - Bioload points: small(<=2")=1, medium(2-5")=3, large(5-10")=8, XL(10+")=14.
      Capacity ~= 1 point per gallon for normal setups, 0.6 pt/gal for heavy/messy setups.
-   - Heater: 3 W/gal lifts ~9F above room; 5 W/gal lifts ~15-20F. Linear interpolation,
-     rounded up to a standard wattage; big tanks (>=40 gal) get a two-heater note.
-   - Filter: turnover 4x (light) / 5x (normal) / 7x (heavy) per hour, +20% real-world derating.
+   - Heater: watts per gallon from the rise (2.5 / 3 / 4 / 5), rounded up to a standard size;
+     tanks >= 40 gal get a two-heater note.
+   - Filter: turnover 4 (light) / 5 (normal) / 7 (heavy) per hour, then +20% rounded up to 5 GPH.
+     The 20% is this calculator's allowance, not a measured media loss.
    - Water changes: change% x (start - tap) = post-change nitrate; solve for the change that
      lands the weekly rise at the ceiling plateau. Pure functions below, DOM wiring separate. */
 "use strict";
@@ -112,8 +113,8 @@ function calcFilter(){
   var box = el("akFilterResult"); box.hidden = false;
   if (window.updateMatchedCTA) window.updateMatchedCTA(parseFloat(el('akFGallons').value)||20, 'filter');
   box.innerHTML =
-    '<div class="big">'+r.gph+' <span class="unit">GPH ('+r.turns+'× turnover, derated for real media)</span></div>'+
-    '<p class="note">Manufacturer GPH is measured empty — media, tubing, and pre-filters cut real flow 15–25%, hence the derating. A 29 gal normal community wants '+fmt(r.ideal)+' GPH ideal, ~'+r.gph+' GPH on the box. Sponge filters: count at half their rating.</p>';
+    '<div class="big">'+r.gph+' <span class="unit">GPH ('+r.turns+'× turnover, plus a 20% step)</span></div>'+
+    '<p class="note">Ideal flow is '+fmt(r.ideal)+' GPH. The rating printed here is that ideal plus a 20% step, rounded up to the next 5 GPH. The step is a planning allowance, not a measured loss and not a manufacturer test.</p>';
 }
 
 function calcWaterChange(){
@@ -127,7 +128,7 @@ function calcWaterChange(){
   }
   box.innerHTML =
     '<div class="big">'+r.weeklyPct+'% <span class="unit">weekly change → plateau ~'+r.plateau+' ppm</span></div>'+
-    '<p class="note">Measure, don\'t guess: test nitrate 7 days apart to get your true rise rate. Never change 100% — you crash the cycle. Big changes beat frequent small ones for nitrate control; keep temperature matched within a few degrees. If your tap nitrate is high, plants or RO blending are the fix, not bigger changes.</p>';
+    '<p class="note">The percent is solved from the rise, ceiling, and tap you entered. It is not a universal weekly rule. Re-enter the numbers when a new test changes the rise or the tap.</p>';
 }
 
 /* ---------- init ---------- */
