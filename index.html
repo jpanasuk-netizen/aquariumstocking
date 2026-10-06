@@ -77,6 +77,7 @@
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any",
   "url": "https://aquarium-stocking.com/",
+  "dateModified": "2026-10-06",
   "description": "Stocking calculator for freshwater aquarium keepers. Bioload beats the inch-per-gallon myth. Count your fish by adult size and waste class — get stocking points, heater watts, filter GPH, and your water-change schedule.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
@@ -99,6 +100,8 @@
 
 <main>
 <h1>Aquarium Stocking Calculator</h1>
+<p class="small">Last updated: October 6, 2026</p>
+<p>This calculator turns a tank size and adult fish counts into stocking points, and it also plans heater watts, filter gallons per hour, and a water-change percent. On a normal setup, capacity is 1 point per gallon (small fish 1, medium 3, large 8, XL 14). A 20-gallon tank from 68°F to 78°F is 100 watts.</p>
 <p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free tank recipe card — print it, 10 minutes.</a></p>
 <p class="sub">Stocking calculator for freshwater aquarium keepers.</p>
 <p class="sub">Bioload beats the inch-per-gallon myth. Count your fish by adult size and waste class — get stocking points, heater watts, filter GPH, and your water-change schedule.</p>
@@ -151,10 +154,11 @@
     <button class="tabs" style="display:inline-block" onclick="calcStocking()">Check my tank</button>
   </fieldset>
   <div id="akStockResult" class="ans" hidden></div>
+  <p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
   <div id="matchedCta" hidden></div>
   <div class="affil">
     <span class="tag">Stock up</span>
-    <p class="small">Test kits, filters, and tank deals linked after affiliate approval. <a href="https://www.amazon.com/s?k=aquarium+liquid+test+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">liquid test kits on Amazon</a> · <a href="https://www.amazon.com/s?k=hang+on+back+aquarium+filter&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">HOB filters on Amazon</a> · <a href="https://www.amazon.com/s?k=aquarium+heater+adjustable&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">heaters on Amazon</a></p>
+    <p class="small">Test kits and filters on Amazon. <a href="https://www.amazon.com/s?k=aquarium+liquid+test+kit&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">liquid test kits on Amazon</a> · <a href="https://www.amazon.com/s?k=hang+on+back+aquarium+filter&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">HOB filters on Amazon</a> · <a href="https://www.amazon.com/s?k=aquarium+heater+adjustable&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">heaters on Amazon</a></p>
   </div>
 </section>
 
@@ -364,9 +368,13 @@
   <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a>
   · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a>
 <br>
-Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/embed-calculator.html">Embed this calculator</a></footer>
+Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/embed-calculator.html">Embed this calculator</a></footer>
 
+<script type="application/json" id="share-spec">
+{"stock":{"fn":"calcStocking","box":"akStockResult","need":"akGallons","panel":"tab-stock","i":0,"name":"stocking","keys":[["g","akGallons"],["sm","akSmall"],["md","akMed"],["lg","akLarge"],["xl","akHuge"],["st","akStyle",1]],"line":["gallons ","@akGallons"," · small ","@akSmall"," · medium ","@akMed"," · large ","@akLarge"," · XL ","@akHuge"," · setup ","@akStyle"]},"heat":{"fn":"calcHeater","box":"akHeatResult","need":"akHGallons","panel":"tab-heat","i":1,"name":"heater","keys":[["g","akHGallons"],["room","akRoom"],["target","akTarget"]],"line":["gallons ","@akHGallons"," · room ","@akRoom","°F · target ","@akTarget","°F"]},"filter":{"fn":"calcFilter","box":"akFilterResult","need":"akFGallons","panel":"tab-filter","i":2,"name":"filter","keys":[["g","akFGallons"],["lv","akFStock",1]],"line":["gallons ","@akFGallons"," · level ","@akFStock"]},"water":{"fn":"calcWaterChange","box":"akWaterResult","need":"akWNitrate","panel":"tab-water","i":3,"name":"water-change","keys":[["rise","akWNitrate"],["ceil","akWTarget"],["tap","akWTap"]],"line":["rise ","@akWNitrate"," ppm · ceiling ","@akWTarget"," ppm · tap ","@akWTap"," ppm"]}}
+</script>
 <script defer src="assets/app.js"></script>
+<script defer src="assets/share-result.js"></script>
 <script defer src="assets/monetization.js"></script>
 <script defer src="assets/magnet-cta.js"></script>
 

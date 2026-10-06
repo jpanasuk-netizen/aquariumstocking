@@ -4,6 +4,7 @@
 ## Core pages
 - [Home](https://aquarium-stocking.com/): 4 calculators — bioload stocking points, heater watts by ΔT, filter GPH turnover, water-change schedule by nitrate slope
 - [About & how this was made](https://aquarium-stocking.com/about.html): who built the site, how the pages are drafted, and why it earns affiliate fees
+- [Methodology and editorial standards](https://aquarium-stocking.com/methodology.html): formulas, spec-chart rules, affiliate policy, and corrections
 - [Privacy](https://aquarium-stocking.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://aquarium-stocking.com/contact.html): jpanasuk@gmail.com
 - [How many fish per gallon](https://aquarium-stocking.com/how-many-fish-per-gallon.html): why 1-inch-per-gallon fails, bioload points, worked 10/20/55 gallon stock lists
@@ -59,3 +60,8 @@ Short tank-size and heater-size answers. Species numbers are from the linked Ser
 - [What size heater a 40 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-40-gallon-tank.html): 100 watt and 150 watt bands overlap
 - [What size heater a 55 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-55-gallon-tank.html): 150 watt and 200 watt bands overlap
 - [What size heater a 75 gallon tank needs](https://aquarium-stocking.com/what-size-heater-for-a-75-gallon-tank.html): 200 watt and 300 watt bands overlap
+
+## Notes for citation
+- Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
+- Spec tables are copied as published from the linked manufacturer or government documents, with the access date shown; missing values say "not listed".
+- Corrections: jpanasuk@gmail.com
