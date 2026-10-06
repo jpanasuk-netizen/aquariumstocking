@@ -77,6 +77,10 @@
 <h2>Worked examples on the water-change tab</h2>
 <p>The function solves for a change that holds the steady plateau at the ceiling you type. Fraction = rise / (ceiling − tap). If that fraction is 0.95 or more, it returns no schedule: tap nitrate is too close to the ceiling for water changes alone. Otherwise it rounds the fraction up to a 5% step, and it will not print a change under 15%. Plateau at the printed percent is round(tap + rise / (percent / 100)). The two runs below are example inputs, not readings.</p>
 <div class="ans"><strong>Rise 20 ppm, ceiling 40 ppm, tap 5 ppm: fraction 20/35, change 60%, plateau 38 ppm.</strong></div>
+<figure>
+<img src="/assets/img/water-change-20-40-5.svg" width="720" height="180" alt="Example inputs of a 20 ppm nitrate rise, a 40 ppm ceiling, and 5 ppm tap water, returning a 60 percent water change and a 38 ppm plateau." loading="lazy">
+<figcaption>Example inputs only: rise 20 ppm, ceiling 40 ppm, tap 5 ppm. This calculator returns a 60% change and a plateau of 38 ppm. Source: the water-change function on this site, not a measured tank.</figcaption>
+</figure>
 <p>20 / (40 − 5) = 20/35. Rounded up to a 5% step, ceil((20/35) × 20) × 5 = 60. The plateau at a 60% change is round(5 + 20 / 0.60) = 38. Enter 20, 40, and 5 on the water-change tab if you want to see the same card. Do not reuse them as if they were measured in your tank. If your rise, ceiling, or tap is different, the percent is different.</p>
 <div class="ans"><strong>Rise 10 ppm, ceiling 40 ppm, tap 0 ppm: fraction 0.25, change 25%, plateau 40 ppm.</strong></div>
 <p>10 / (40 − 0) = 0.25. ceil(0.25 × 20) × 5 = 25. The plateau is round(0 + 10 / 0.25) = 40, which is the ceiling you asked to hold. A smaller weekly rise, and tap nitrate at zero, is a smaller change. That is the whole point of testing instead of copying a percent from another tank.</p>

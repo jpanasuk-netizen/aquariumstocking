@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="t d">
+<title id="t">20-gallon calculator flow</title>
+<desc id="d">Normal capacity 20 points, heater 100 watts from 68 to 78 F, filter rating 120 gallons per hour.</desc>
+<rect width="720" height="220" fill="#f6f8fa"/>
+<rect x="16" y="70" width="150" height="80" rx="8" fill="#fff" stroke="#0969da"/>
+<text x="91" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#1f2328">20 gallons</text>
+<text x="91" y="126" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#57606a">one input</text>
+<polygon points="176,110 196,100 196,120" fill="#0969da"/>
+<rect x="206" y="24" width="150" height="72" rx="8" fill="#fff" stroke="#1f2328"/>
+<text x="281" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1f2328">Capacity 20 pts</text>
+<text x="281" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#57606a">1 point per gallon</text>
+<rect x="206" y="124" width="150" height="72" rx="8" fill="#fff" stroke="#1f2328"/>
+<text x="281" y="152" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#1f2328">Heater 100 W</text>
+<text x="281" y="174" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#57606a">68°F to 78°F</text>
+<rect x="400" y="70" width="300" height="80" rx="8" fill="#fff" stroke="#1f2328"/>
+<text x="550" y="104" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#1f2328">Filter rating 120 GPH</text>
+<text x="550" y="126" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#57606a">normal: 5 turnovers, then 20%</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="200" viewBox="0 0 720 200" role="img" aria-labelledby="t d">
+<title id="t">20-gallon filter ratings on this calculator</title>
+<desc id="d">Light 100 GPH, normal 120 GPH, heavy 170 GPH.</desc>
+<rect width="720" height="200" fill="#f6f8fa"/>
+<text x="16" y="28" font-family="system-ui,sans-serif" font-size="15" fill="#1f2328">20 gallons, this site's filter function</text>
+<g font-family="system-ui,sans-serif" font-size="14" fill="#1f2328">
+<text x="16" y="68">Light</text>
+<rect x="90" y="50" width="200" height="26" fill="#0969da"/>
+<text x="300" y="68">100 GPH</text>
+<text x="16" y="110">Normal</text>
+<rect x="90" y="92" width="240" height="26" fill="#0969da"/>
+<text x="340" y="110">120 GPH</text>
+<text x="16" y="152">Heavy</text>
+<rect x="90" y="134" width="340" height="26" fill="#0969da"/>
+<text x="440" y="152">170 GPH</text>
+</g>
+</svg>

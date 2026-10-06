@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquarium Stocking Calculator</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://aquarium-stocking.com/">
+<style>
+:root{color-scheme:light dark;--bg:#f6f8fa;--fg:#1f2328;--mut:#57606a;--bd:#d0d7de;--card:#fff;--acc:#0969da}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--mut:#8b949e;--bd:#30363d;--card:#161b22;--acc:#58a6ff}}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.4 system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--fg)}
+main{padding:.6rem .7rem .4rem}
+h1{font-size:1rem;margin:0 0 .45rem}
+label{display:block;font-size:.78rem;color:var(--mut);margin-bottom:.15rem}
+input,select,button{font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:6px}
+input,select{width:100%;padding:.35rem .45rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .5rem}
+button{margin-top:.5rem;background:var(--acc);color:#fff;border:0;padding:.4rem .7rem;cursor:pointer}
+#out{margin:.45rem 0 0;min-height:2.6rem;font-weight:650}
+#out p{margin:.2rem 0 0;font-weight:400;color:var(--mut);font-size:.82rem}
+.credit{margin:0;padding:.35rem .7rem .55rem;font-size:.82rem;border-top:1px solid var(--bd)}
+.credit a{color:var(--acc)}
+</style>
+</head>
+<body>
+<main>
+<h1>Aquarium Stocking Calculator</h1>
+<div class="grid">
+  <div>
+    <label for="kind">What to size</label>
+    <select id="kind">
+      <option value="stock">Stocking points</option>
+      <option value="heat">Heater watts</option>
+      <option value="filter">Filter GPH</option>
+      <option value="water">Water change</option>
+    </select>
+  </div>
+  <div>
+    <label for="gallons">Tank gallons</label>
+    <input id="gallons" type="number" min="1" value="20">
+  </div>
+  <div id="f-small">
+    <label for="small">Small fish (1 pt)</label>
+    <input id="small" type="number" min="0" value="8">
+  </div>
+  <div id="f-style">
+    <label for="style">Setup</label>
+    <select id="style"><option value="community">Normal</option><option value="heavy">Heavy-stock</option></select>
+  </div>
+  <div id="f-room" hidden>
+    <label for="room">Room °F</label>
+    <input id="room" type="number" value="68">
+  </div>
+  <div id="f-target" hidden>
+    <label for="target">Target °F</label>
+    <input id="target" type="number" value="78">
+  </div>
+  <div id="f-level" hidden>
+    <label for="level">Filter level</label>
+    <select id="level"><option value="light">Light</option><option value="normal" selected>Normal</option><option value="heavy">Heavy</option></select>
+  </div>
+  <div id="f-rise" hidden>
+    <label for="rise">Weekly nitrate rise (ppm)</label>
+    <input id="rise" type="number" value="20">
+  </div>
+  <div id="f-ceil" hidden>
+    <label for="ceil">Nitrate ceiling (ppm)</label>
+    <input id="ceil" type="number" value="40">
+  </div>
+  <div id="f-tap" hidden>
+    <label for="tap">Tap nitrate (ppm)</label>
+    <input id="tap" type="number" value="5">
+  </div>
+</div>
+<button type="button" id="go">Calculate</button>
+<div id="out" aria-live="polite"></div>
+</main>
+<p class="credit">Calculator by <a href="https://aquarium-stocking.com/" target="_blank" rel="noopener">Aquarium Stocking</a></p>
+<script src="/assets/app.js"></script>
+<script>
+(function(){
+  var kind = document.getElementById("kind");
+  function show(){
+    var k = kind.value;
+    ["f-small","f-style","f-room","f-target","f-level","f-rise","f-ceil","f-tap"].forEach(function(id){
+      document.getElementById(id).hidden = true;
+    });
+    if(k==="stock"){ document.getElementById("f-small").hidden=false; document.getElementById("f-style").hidden=false; }
+    if(k==="heat"){ document.getElementById("f-room").hidden=false; document.getElementById("f-target").hidden=false; }
+    if(k==="filter"){ document.getElementById("f-level").hidden=false; }
+    if(k==="water"){ document.getElementById("f-rise").hidden=false; document.getElementById("f-ceil").hidden=false; document.getElementById("f-tap").hidden=false; document.getElementById("gallons").parentElement.hidden=true; }
+    else { document.getElementById("gallons").parentElement.hidden=false; }
+  }
+  kind.addEventListener("change", show);
+  show();
+  function n(id){ return parseFloat(document.getElementById(id).value) || 0; }
+  document.getElementById("go").addEventListener("click", function(){
+    var out = document.getElementById("out");
+    var g = n("gallons");
+    var k = kind.value;
+    if(k==="stock"){
+      var r = calcStockingPoints(g, n("small"), 0, 0, 0, document.getElementById("style").value);
+      out.innerHTML = r.points+" points of "+r.capacity+" — "+r.status+" ("+r.pct+"%)<p>Planning estimate from this site's point rules. Small fish are 1 point each.</p>";
+    } else if(k==="heat"){
+      var h = calcHeaterWatts(g, n("room"), n("target"));
+      var two = h.twoHeaters ? " Two-heater note: "+h.twoHeaters[0]+" W each." : " One heater.";
+      out.innerHTML = h.watts+" W<p>"+h.dT+"°F rise, "+h.wpg+" W per gallon, "+h.raw+" W raw, next standard size "+h.watts+" W."+two+" Planning estimate.</p>";
+    } else if(k==="filter"){
+      var f = calcFilterGPH(g, document.getElementById("level").value);
+      out.innerHTML = f.gph+" GPH<p>"+f.turns+" turnovers, ideal "+f.ideal+" GPH, then this site's 20% step. Planning estimate, not a box rating.</p>";
+    } else {
+      var w = waterChangeMath(n("rise"), n("ceil"), n("tap"));
+      if(w.weeklyPct===null){ out.textContent = w.note; }
+      else { out.innerHTML = w.weeklyPct+"% weekly change<p>Plateau "+w.plateau+" ppm. Example math from the rise, ceiling, and tap you entered.</p>"; }
+    }
+  });
+})();
+</script>
+</body>
+</html>

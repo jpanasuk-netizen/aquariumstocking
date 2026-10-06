@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-labelledby="t d">
+<title id="t">Water-change example from stated inputs</title>
+<desc id="d">Rise 20 ppm, ceiling 40 ppm, tap 5 ppm returns a 60 percent change and a 38 ppm plateau.</desc>
+<rect width="720" height="180" fill="#f6f8fa"/>
+<g font-family="system-ui,sans-serif" fill="#1f2328">
+<rect x="16" y="36" width="150" height="100" rx="8" fill="#fff" stroke="#d0d7de"/>
+<text x="91" y="78" text-anchor="middle" font-size="15">Rise 20 ppm</text>
+<text x="91" y="102" text-anchor="middle" font-size="13" fill="#57606a">example input</text>
+<rect x="190" y="36" width="170" height="100" rx="8" fill="#fff" stroke="#d0d7de"/>
+<text x="275" y="78" text-anchor="middle" font-size="15">Ceiling 40 ppm</text>
+<text x="275" y="102" text-anchor="middle" font-size="13" fill="#57606a">example input</text>
+<rect x="384" y="36" width="150" height="100" rx="8" fill="#fff" stroke="#d0d7de"/>
+<text x="459" y="78" text-anchor="middle" font-size="15">Tap 5 ppm</text>
+<text x="459" y="102" text-anchor="middle" font-size="13" fill="#57606a">example input</text>
+<rect x="556" y="36" width="148" height="100" rx="8" fill="#fff" stroke="#0969da"/>
+<text x="630" y="74" text-anchor="middle" font-size="15">60% change</text>
+<text x="630" y="98" text-anchor="middle" font-size="14">plateau 38 ppm</text>
+</g>
+</svg>

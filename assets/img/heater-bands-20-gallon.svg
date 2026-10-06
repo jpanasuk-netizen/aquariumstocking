@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" role="img" aria-labelledby="t d">
+<title id="t">20-gallon heater bands that do not match</title>
+<desc id="d">Calculator 100 watts, Aqueon 50 and 100 watt bands, EHEIM 75 watts, Fluval E100 up to 30 gallons.</desc>
+<rect width="720" height="280" fill="#f6f8fa"/>
+<text x="16" y="28" font-family="system-ui,sans-serif" font-size="15" fill="#1f2328">20 US gallons, four charts</text>
+<g font-family="system-ui,sans-serif" font-size="14" fill="#1f2328">
+<rect x="16" y="44" width="688" height="48" rx="6" fill="#fff" stroke="#d0d7de"/>
+<text x="28" y="73">This calculator, 68°F to 78°F: 100 W, one heater</text>
+<rect x="16" y="100" width="688" height="48" rx="6" fill="#fff" stroke="#d0d7de"/>
+<text x="28" y="129">Aqueon: 20 gal is in 50 W (520) and 100 W (1540). Room not listed.</text>
+<rect x="16" y="156" width="688" height="48" rx="6" fill="#fff" stroke="#d0d7de"/>
+<text x="28" y="185">EHEIM 75 W: 15.826.4 US gal. Room 70°F, water up to 79°F.</text>
+<rect x="16" y="212" width="688" height="48" rx="6" fill="#fff" stroke="#d0d7de"/>
+<text x="28" y="241">Fluval E100: up to 30 US gal. Room 68°F, water up to 78°F.</text>
+</g>
+</svg>
