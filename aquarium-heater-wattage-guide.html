@@ -9,11 +9,11 @@
 <meta property="og:image" content="https://aquarium-stocking.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://aquarium-stocking.com/assets/og-image.png">
-<meta name="description" content="Aquarium heater sizing: 3 W/gal for ~9°F rise, 5 W/gal for 15–20°F, wattage table for every tank size, two-heater redundancy above 40 gallons, and thermostat...">
+<meta name="description" content="A 20-gallon tank from 68°F to 78°F is 100 watts on this calculator. Aqueon, Eheim, and Fluval publish different bands for that volume.">
 <link rel="canonical" href="https://aquarium-stocking.com/aquarium-heater-wattage-guide.html">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Aquarium Heater Wattage — Sizing by Tank and Temperature Rise">
-<meta property="og:description" content="The 3–5 W/gal rule explained with a ΔT table for every tank size, two-heater setups for 40+ gallons, and why oversizing is safer than undersizing.">
+<meta property="og:description" content="A 20-gallon tank from 68°F to 78°F is 100 watts on this calculator. Aqueon, Eheim, and Fluval publish different bands for that volume.">
 <meta property="og:url" content="https://aquarium-stocking.com/aquarium-heater-wattage-guide.html">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
@@ -23,27 +23,56 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What wattage heater for a 20 gallon aquarium?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A 20-gallon tank heated from a 68°F room to 78°F (a 10°F rise) needs 75–100 W: 3–4 W per gallon at that ΔT. In a cold basement or for a bigger rise (tropical Discus at 84°F), step to 150 W. Two 75 W units are better than one 150 W on anything 40 gallons and up." }
+      "name": "What wattage does this calculator return for 20 gallons from 68°F to 78°F?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100 watts. The rise is 10°F, the function uses 4 watts per gallon for a rise above 9°F and at most 15°F, the raw load is 80 watts, and the next standard size at or above 80 is 100. The two-heater note starts at 40 gallons, so this example is one heater."
+      }
     },
     {
       "@type": "Question",
-      "name": "Is a bigger aquarium heater safe?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes — with a working thermostat. An oversized heater reaches temperature with short, infrequent cycles and fails safe at shutdown; an undersized one runs 100% duty forever, wears out, and leaves the tank cold when it dies. The real risks are mechanical: cracked glass from dry running, no thermometer cross-check, and heaters without thermal shutoff." }
+      "name": "Which manufacturer band includes a 20-gallon tank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aqueon lists 20 gallons in both the 50 watt band (5–20 gallons) and the 100 watt band (15–40 gallons). EHEIM thermocontrol's 75 watt row is 15.8–26.4 US gallons, for a 70°F room and water up to 79°F. Fluval's E100 is 100 watts for aquariums up to 30 US gallons, at about 78°F water and a 68°F room. Those are three different charts. They are not the same number."
+      }
     }
   ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": []
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Aquarium heater wattage, by the math",
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-10-06",
+  "author": { "@type": "Organization", "name": "Aquarium Stocking" },
+  "publisher": { "@type": "Organization", "name": "Aquarium Stocking" },
+  "mainEntityOfPage": "https://aquarium-stocking.com/aquarium-heater-wattage-guide.html"
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Aquarium Stocking",
+   "item": "https://aquarium-stocking.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Aquarium heater wattage, by the math",
+   "item": "https://aquarium-stocking.com/aquarium-heater-wattage-guide.html"
+  }
+ ]
+}
 </script>
-<meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -82,6 +111,33 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h2>Power-outage planning</h2>
 <p>A stocked tropical tank in a winter outage loses safe temperature in 4–12 hours depending on volume and room. Options in order: wrap the tank in blankets (works surprisingly well), a small inverter off a car or battery station for the heater, or — for big tanks — let it fall slowly; most community fish handle 68°F far better than a temperature crash to 55°F. Sizing backup power is its own math problem — that's a battery-and-runtime calculation.</p>
 
+<h2>A worked 20-gallon example</h2>
+<p>Section added October 6, 2026. The table above is the sketch already on this page. The block below is the heater function on the <a href="index.html#calc">calculator</a>, with the inputs written out. Watts per gallon on this site are a planning estimate, not a published standard. Open the Heater size tab and enter the same numbers.</p>
+<div class="ans"><strong>20 gallons, room 68°F, target 78°F: a 10°F rise, 4 watts per gallon, 80 watts raw, next standard size 100 watts. One heater.</strong></div>
+<p>The rise is 78 − 68 = 10°F. The function uses 2.5 watts per gallon at a rise of 5°F or less, 3 watts up to 9°F, 4 watts up to 15°F, and 5 watts above that. Ten degrees uses 4. Raw watts are 20 × 4 = 80. Standard sizes checked in order are 25, 50, 75, 100, 150, 200, 250, 300, 400, and 500. The first size at or above 80 is 100 watts. A second heater is noted only at 40 gallons and up, so this 20-gallon run is one unit.</p>
+<p>Put the same 20 gallons next to three manufacturer charts. They do not agree, and this page does not average them.</p>
+<ul>
+<li><a href="https://www.aqueon.com/-/media/project/oneweb/aqueon/files/us/educational/aq_heater_wattage_chart.pdf" target="_blank" rel="noopener">Aqueon's heater wattage guidelines</a> list 50 watts for 5–20 gallons and 100 watts for 15–40 gallons. Twenty gallons is inside both bands. That one-page chart does not state a room temperature or a degrees-of-rise.</li>
+<li><a href="https://www.eheim.com/media/pdf/c7/65/0c/3611-3619_thermocontroldPSgHh7gyBpLG.pdf" target="_blank" rel="noopener">EHEIM thermocontrol</a> (types 3611–3619) calls its table standard ratings for closed aquariums at an ambient room temperature of 21°C (70°F) and a desired water temperature of up to 26°C (79°F). The 75 watt row is 15.8–26.4 US gallons. Twenty gallons sits in that row, not in the 100 watt row (26.4–39.6 US gallons).</li>
+<li><a href="https://fluvalaquatics.com/us/shop/product/e100-electronic-heater-100w-up-to-30-us-gal-120-l" target="_blank" rel="noopener">Fluval E100</a> is a 100 watt heater for aquariums up to 30 US gallons (120 L). The E-series manual says those volumes are approximate for water up to 26°C (78°F) with a room temperature of 20°C (68°F), and that a lower room temperature may require a higher wattage. Twenty gallons is inside the E100 "up to 30" line under that stated room and water temperature. <a href="https://fluvalaquatics.com/us/shop/product/e-series-heaters" target="_blank" rel="noopener">E200</a> is 200 watts up to 65 US gallons, and <a href="https://fluvalaquatics.com/us/shop/product/e300-electronic-heater-300w-up-to-100-us-gal-375-l" target="_blank" rel="noopener">E300</a> is 300 watts up to 100 US gallons.</li>
+</ul>
+<p>For this one set of inputs, the calculator and the Fluval E100 conditions (68°F room, about 78°F water) both land on 100 watts. EHEIM's 75 watt row includes 20 gallons only under its own 70°F-room, up-to-79°F-water rating. Aqueon includes 20 gallons in two wattage bands at once. Use the chart that states the room you actually have. If the room is colder than the chart's assumption, the Fluval manual says a higher wattage may be required. Do not copy the 100 watt result into a 55°F basement.</p>
+<h2>A common mistake</h2>
+<p>Reading "20 gallons" on a box and buying the smallest wattage that mentions 20. On the Aqueon chart, 20 is the top of the 50 watt band and also inside the 100 watt band. The calculator's 100 watt result is for a 10°F rise from 68°F, not for every room.</p>
+<h2>Limits</h2>
+<p>These charts are manufacturer ranges for intact, submerged heaters. They are not a diagnosis of a heater that has cracked, run dry, or stopped controlling. If the tank will not hold temperature, or the heater case is damaged, unplug it and replace it. An aquatic veterinarian is the person to call when fish are sick after a temperature crash, not a wattage table. Backup power for an outage is the topical reason the footer links to <a href="https://generator-sizer.com/">GeneratorSizer</a> and <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a>.</p>
+<h2>FAQ</h2>
+<h3>What wattage does this calculator return for 20 gallons from 68°F to 78°F?</h3>
+<p>100 watts. The rise is 10°F, the function uses 4 watts per gallon for a rise above 9°F and at most 15°F, the raw load is 80 watts, and the next standard size at or above 80 is 100. The two-heater note starts at 40 gallons, so this example is one heater.</p>
+<h3>Which manufacturer band includes a 20-gallon tank?</h3>
+<p>Aqueon lists 20 gallons in both the 50 watt band (5–20 gallons) and the 100 watt band (15–40 gallons). EHEIM thermocontrol's 75 watt row is 15.8–26.4 US gallons, for a 70°F room and water up to 79°F. Fluval's E100 is 100 watts for aquariums up to 30 US gallons, at about 78°F water and a 68°F room. Those are three different charts. They are not the same number.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Aqueon. Heater Wattage Guidelines. <a href="https://www.aqueon.com/-/media/project/oneweb/aqueon/files/us/educational/aq_heater_wattage_chart.pdf" target="_blank" rel="noopener">https://www.aqueon.com/-/media/project/oneweb/aqueon/files/us/educational/aq_heater_wattage_chart.pdf</a>. Accessed October 6, 2026.</li>
+<li>EHEIM. thermocontrol operating manual, types 3611–3619. <a href="https://www.eheim.com/media/pdf/c7/65/0c/3611-3619_thermocontroldPSgHh7gyBpLG.pdf" target="_blank" rel="noopener">https://www.eheim.com/media/pdf/c7/65/0c/3611-3619_thermocontroldPSgHh7gyBpLG.pdf</a>. Accessed October 6, 2026.</li>
+<li>Fluval. E100 product page, and E-series heater manual (volumes stated for about 78°F water and a 68°F room). <a href="https://fluvalaquatics.com/us/shop/product/e100-electronic-heater-100w-up-to-30-us-gal-120-l" target="_blank" rel="noopener">https://fluvalaquatics.com/us/shop/product/e100-electronic-heater-100w-up-to-30-us-gal-120-l</a>. Manual PDF: <a href="https://www.aquasabi.de/cdn/fluval/Fluval_E-Serie_Heizer_DE_EN.pdf" target="_blank" rel="noopener">https://www.aquasabi.de/cdn/fluval/Fluval_E-Serie_Heizer_DE_EN.pdf</a>. Accessed October 6, 2026.</li>
+</ul>
 <div class="affil">
   <span class="tag">Heaters</span>
   <p class="small">Heaters and thermometers: <a href="https://www.amazon.com/s?k=adjustable+aquarium+heater&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">adjustable heaters on Amazon</a> · <a href="https://www.amazon.com/s?k=digital+aquarium+thermometer&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">thermometers on Amazon</a></p>
@@ -94,6 +150,11 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a>
 <br>
 Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>
+</section>
 </main>
 
 

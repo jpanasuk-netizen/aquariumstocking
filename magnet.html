@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Tank Recipe Card — Bioload Points, Heater, Filter by...</title>
+<title>Free Tank Recipe Card</title>
 <meta name="description" content="Printable stocking card: bioload points instead of inch-per-gallon, plus heater watts and filter GPH for 10/20/29/55/75 gallon tanks.">
 <link rel="canonical" href="https://aquarium-stocking.com/magnet.html">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="FREE: Tank recipe card">
+<meta property="og:title" content="Free Tank Recipe Card">
 <meta property="og:description" content="Printable stocking card: bioload points instead of inch-per-gallon, plus heater watts and filter GPH for 10/20/29/55/75 gallon tanks.">
 <meta property="og:url" content="https://aquarium-stocking.com/magnet.html">
 <meta property="og:type" content="article">
@@ -66,15 +66,26 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:v
 }
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": []
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Aquarium Stocking",
+   "item": "https://aquarium-stocking.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Inch-per-gallon is goldfish-bowl advice. Count waste, not inches.",
+   "item": "https://aquarium-stocking.com/magnet.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
-</script>
-<meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
 <body>
 <div class="wrap">
@@ -106,6 +117,11 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   <a class="cta" href="https://aquarium-stocking.com/">Check your stocking →</a>
   <a class="cta ghost" href="#" onclick="window.print();return false;">Print / Save PDF</a>
 </p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>
+</section>
 <footer>
 AquariumStocking · numbers from published manufacturer / extension / DOE figures already on the calculator · not a substitute for a licensed pro or a test bead / Manual J / door-sticker check.
 <br>

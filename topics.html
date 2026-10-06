@@ -22,15 +22,26 @@
 }
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": []
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Aquarium Stocking",
+   "item": "https://aquarium-stocking.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "What AquariumStocking is for",
+   "item": "https://aquarium-stocking.com/topics.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
-</script>
-<meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -43,6 +54,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 <main>
 <h1>What AquariumStocking is for</h1>
+<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free tank recipe card — print it, 10 minutes.</a></p>
 <p class="sub">Stocking calculator for freshwater aquarium keepers.</p>
 <p>Not reef or saltwater. Inch-per-gallon is goldfish-bowl advice.</p>
 <p>This map lists <strong>pages that exist</strong>. It is not a keyword dump and it does not treat every article as its own niche. The calculator (or the pack) is the hub. Guides sit under one pillar each.</p>
@@ -102,13 +114,20 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="/how-to-keep-pet-fish-alive.html">How to keep pet fish alive</a> — Cycle, test, then stock a 20-gallon starter.</li>
 <li><a href="/how-many-koi-in-a-500-gallon-pond.html">Koi in a 500-gallon pond</a> — Aquarium math labeled as aquarium math, plus SRAC water limits.</li>
 <li><a href="/how-to-humanely-euthanize-a-fish.html">Humane euthanasia</a> — AVMA 2020 wording. A veterinarian performs it.</li>
+<li><a href="/how-many-fish-in-a-10-29-or-55-gallon-tank.html">Fish in a 10, 29, or 55 gallon tank</a> — Each size through the calculator. Published October 6, 2026.</li>
+<li><a href="/how-often-to-change-aquarium-water.html">How often to change aquarium water</a> — The percent comes from the nitrate rise you measure.</li>
 </ul>
 <h2>Sisters</h2>
 <p>Adjacent math lives next door, not here. <a href="https://generator-sizer.com/">GeneratorSizer</a> · <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a></p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>
+</section>
 </main>
-<footer>AquariumStocking · topical map · published-spec numbers only · <a href="index.html">calculator / home</a> · <a href="magnet.html">printable cheat sheet</a><br>
+<footer>AquariumStocking · topical map · published-spec numbers only · <a href="index.html">calculator / home</a> · <a href="magnet.html">printable cheat sheet</a> · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a><br>
 Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
-<script src="assets/magnet-cta.js"></script>
+<script defer src="assets/magnet-cta.js"></script>
 
 
 

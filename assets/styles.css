@@ -5,7 +5,7 @@
   --okbg:#121a12; --maxw:900px;
 }
 @media (prefers-color-scheme: light){
-  :root{ --bg:#f6f8fa; --card:#ffffff; --fg:#1f2328; --mut:#57606a; --bd:#d0d7de; --acc:#0969da; --okbg:#eaf5ea; }
+  :root{ --bg:#f6f8fa; --card:#ffffff; --fg:#1f2328; --mut:#57606a; --bd:#d0d7de; --acc:#0969da; --okbg:#eaf5ea; --warn:#8a5a00; }
 }
 *{margin:0;box-sizing:border-box}
 html{scroll-behavior:smooth}

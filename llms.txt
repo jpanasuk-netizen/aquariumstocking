@@ -7,13 +7,14 @@
 - [Privacy](https://aquarium-stocking.com/privacy.html): what the site loads and what it does not collect
 - [Contact](https://aquarium-stocking.com/contact.html): jpanasuk@gmail.com
 - [How many fish per gallon](https://aquarium-stocking.com/how-many-fish-per-gallon.html): why 1-inch-per-gallon fails, bioload points, worked 10/20/55 gallon stock lists
-- [Heater wattage guide](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html): 3-5 W/gal rule by ΔT, two-heater redundancy, outage planning
+- [Heater wattage guide](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html): calculator result for 20 gallons, 68°F to 78°F, set beside Aqueon, EHEIM, and Fluval bands (updated October 6, 2026)
+- [How many fish in a 10, 29, or 55 gallon tank](https://aquarium-stocking.com/how-many-fish-in-a-10-29-or-55-gallon-tank.html): each size through the stocking, heater, and filter functions
+- [How often to change aquarium water](https://aquarium-stocking.com/how-often-to-change-aquarium-water.html): no universal weekly percent; example inputs 20/40/5 ppm return 60%
 
 ## Sister sites
 - [GeneratorSizer](https://generator-sizer.com/): generator and inverter sizing
 - [Battery Bank Sizer](https://battery-bank-sizer.com/): off-grid battery bank sizing
 - [SolarSizer](https://solar-sizer.com/): off-grid solar system sizing
-- [ChickenCoopCalc](https://chickencoopcalc.com/): coop sizing and feed math
 
 ## Use policy
 Cite freely with link attribution. Guidance from standard hobbyist practice; do not present as veterinary advice.
@@ -22,12 +23,13 @@ Cite freely with link attribution. Guidance from standard hobbyist practice; do 
 - [AquariumStocking topic map](https://aquarium-stocking.com/topics.html): Stocking calculator for freshwater aquarium keepers.
 - **Bioload stocking:** [Stocking calculator](https://aquarium-stocking.com/), [Tank recipe card](https://aquarium-stocking.com/magnet.html), [How many fish per gallon](https://aquarium-stocking.com/how-many-fish-per-gallon.html)
 - **Worked example:** [Fish in a 20 gallon](https://aquarium-stocking.com/how-many-fish-in-a-20-gallon-tank.html)
-- **Filtration:** [Filter for a 20 gallon](https://aquarium-stocking.com/what-size-filter-for-a-20-gallon-tank.html)
+- **Filtration:** [Filter for a 20 gallon](https://aquarium-stocking.com/what-size-filter-for-a-20-gallon-tank.html) — calculator turnover (light 4, normal 5, heavy 7, plus 20%) added October 6, 2026
+- **Water changes:** [How often to change aquarium water](https://aquarium-stocking.com/how-often-to-change-aquarium-water.html)
 - **Heat:** [Heater wattage](https://aquarium-stocking.com/aquarium-heater-wattage-guide.html)
 
 ## Care
 Sourced care pages published October 3, 2026. Each one runs the site's calculator and cites the manual or extension sheet it uses.
-- [Cloudy water in a new tank](https://aquarium-stocking.com/how-to-fix-cloudy-water-in-a-new-tank.html): test ammonia and nitrite before treating a cloud
+- [Cloudy water in a new tank](https://aquarium-stocking.com/how-to-fix-cloudy-water-in-a-new-tank.html): test ammonia and nitrite before treating a cloud; cycle clocks stay separate (updated October 6, 2026)
 - [How to add fish](https://aquarium-stocking.com/how-to-add-fish-to-your-aquarium.html): quarantine at least 30 days, then a small first group
 - [How much to feed tropical fish](https://aquarium-stocking.com/how-much-to-feed-tropical-fish.html): VM114 maintenance feeding; koi and goldfish differ
 - [How to treat sick fish](https://aquarium-stocking.com/how-to-treat-sick-fish.html): water test first; no drug doses

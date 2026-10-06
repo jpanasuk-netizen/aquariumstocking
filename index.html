@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aquarium Stocking Calculator [Free] | AquariumStocking</title>
+<title>Fish Stocking Calculator for Aquariums | AquariumStocking</title>
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <meta property="og:image" content="https://aquarium-stocking.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://aquarium-stocking.com/assets/og-image.png">
-<meta name="description" content="Use this free aquarium stocking calculator to plan bioload fish counts, heater watts, filter GPH, and water-change timing for your tank.">
+<meta name="description" content="Free fish tank stocking calculator: plan how many fish fit your aquarium by bioload, plus heater watts, filter GPH and water-change timing.">
 <link rel="canonical" href="https://aquarium-stocking.com/">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Aquarium Stocking Calculator — How Many Fish Fit My Tank?">
-<meta property="og:description" content="Forget the 1-inch-per-gallon myth. Bioload-based stocking, heater watts by ΔT, filter turnover, and water-change math for freshwater tanks.">
+<meta property="og:title" content="Fish Stocking Calculator for Aquariums | AquariumStocking">
+<meta property="og:description" content="Free fish tank stocking calculator: plan how many fish fit your aquarium by bioload, plus heater watts, filter GPH and water-change timing.">
 <meta property="og:url" content="https://aquarium-stocking.com/">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/styles.css">
@@ -61,15 +61,26 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Aquarium Stocking","url":"https://aquarium-stocking.com","description":"Freshwater aquarium calculators and product guides.","sameAs":[]}
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": []
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Aquarium Stocking",
+ "url": "https://aquarium-stocking.com/"
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';var h='<h2 id="sources-heading">Sources & Standards</h2><p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>';if(d.sources&&d.sources.length){h+='<ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank" rel="noopener">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';}s.innerHTML=h;var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');if(o&&c){o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};}}});
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Aquarium Stocking Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "url": "https://aquarium-stocking.com/",
+  "description": "Stocking calculator for freshwater aquarium keepers. Bioload beats the inch-per-gallon myth. Count your fish by adult size and waste class — get stocking points, heater watts, filter GPH, and your water-change schedule.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
 </script>
-<meta name="llms.txt" content="https://aquarium-stocking.com/sources.json">
 </head>
 <body>
 
@@ -88,10 +99,11 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <main>
 <h1>Aquarium Stocking Calculator</h1>
+<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free tank recipe card — print it, 10 minutes.</a></p>
 <p class="sub">Stocking calculator for freshwater aquarium keepers.</p>
 <p class="sub">Bioload beats the inch-per-gallon myth. Count your fish by adult size and waste class — get stocking points, heater watts, filter GPH, and your water-change schedule.</p>
 
-<div class="tabs" role="tablist" aria-label="Calculators">
+<div class="tabs" id="calc" role="tablist" aria-label="Calculators">
   <button role="tab" aria-selected="true" onclick="showTab('tab-stock', this)">Stocking</button>
   <button role="tab" aria-selected="false" onclick="showTab('tab-heat', this)">Heater size</button>
   <button role="tab" aria-selected="false" onclick="showTab('tab-filter', this)">Filter GPH</button>
@@ -265,6 +277,8 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="card"><h3><a href="how-much-to-feed-tropical-fish.html">How much to feed tropical fish</a></h3><p>One feeding a day for most pets. Koi and goldfish are not on that schedule.</p></div>
 <div class="card"><h3><a href="how-to-treat-sick-fish.html">How to treat sick fish</a></h3><p>Test the water first. No drug doses on the page.</p></div>
 <div class="card"><h3><a href="how-to-keep-pet-fish-alive.html">How to keep pet fish alive</a></h3><p>One 20-gallon starter run through stocking, heat, filter, and water changes.</p></div>
+<div class="card"><h3><a href="how-many-fish-in-a-10-29-or-55-gallon-tank.html">How many fish in a 10, 29, or 55 gallon tank</a></h3><p>Each size through the stocking, heater, and filter functions. Comfortable is not a day-one load.</p></div>
+<div class="card"><h3><a href="how-often-to-change-aquarium-water.html">How often to change aquarium water</a></h3><p>No universal weekly percent. Example inputs of 20, 40, and 5 ppm return 60% on this calculator.</p></div>
 <div class="card"><h3><a href="how-many-koi-in-a-500-gallon-pond.html">How many koi in a 500-gallon pond</a></h3><p>The aquarium formula applied to 500 gallons, labeled as such. SRAC has no home-pond headcount.</p></div>
 <div class="card"><h3><a href="how-to-humanely-euthanize-a-fish.html">How to humanely euthanize a fish</a></h3><p>AVMA 2020 wording. A veterinarian does it. Flushing and an unanesthetized freezer are unacceptable.</p></div>
 
@@ -307,6 +321,11 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="what-size-tank-for-oscar.html">What size tank does an oscar need?</a></li>
 </ul>
 </section>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Bioload points, watts per gallon, and filter turnover on these pages are planning estimates for a cycled freshwater tank. They are not a published standard.</p>
+</section>
 </main>
 
 <section id="soft-rail" class="panel" aria-label="Related guides and offers" style="margin-top:1.5rem">
@@ -337,15 +356,14 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
   AquariumStocking · free sizing tools for freshwater keepers · pages may contain affiliate links ·
   <a href="https://generator-sizer.com/">GeneratorSizer</a> ·
   <a href="https://solar-sizer.com/">SolarSizer</a> ·
-  <a href="https://welding-calculator.com/">WeldingCalc</a> ·
-  <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a> ·
-  <a href="https://chickencoopcalc.com/">ChickenCoopCalc</a>
+  <a href="https://battery-bank-sizer.com/">Battery Bank Sizer</a>
+  · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a>
 <br>
 Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></footer>
 
-<script src="assets/app.js"></script>
-<script src="assets/monetization.js"></script>
-<script src="assets/magnet-cta.js"></script>
+<script defer src="assets/app.js"></script>
+<script defer src="assets/monetization.js"></script>
+<script defer src="assets/magnet-cta.js"></script>
 
 <div id="amzSticky" hidden aria-hidden="true">
   <a id="amzStickyLink" class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=home+tools&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Shop on Amazon</a>
